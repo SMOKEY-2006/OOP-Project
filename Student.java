@@ -44,21 +44,24 @@ public class Student extends DMAP {
         
         while (true) {
             System.out.println("Please enter your age:");
+            int age = sc.nextInt();
             if (age < 0) {
                 System.out.println("Invalid Age!");
             } else {
-                this.age = sc.nextInt();
+                this.age = age;
                 break;
             }
         }
+        
         System.out.println("please enter your Major");
-        this.Major = sc.nextLine();
+        this.Major = sc.next(); // I deleted the nextline() cuz it wasn't working with me ... if it was working with you type it again. *
         System.out.println("please enter your Gender");
-        this.gender = sc.nextLine();
+        this.gender = sc.next(); // I deleted the nextline() cuz it wasn't working with me ... if it was working with you type it again. *
         
     }
 
     public void displayStudentInfo(){
+        // *just an idea if you can format it this way :System.out.println("|        NAME        |" + "        ADDRESS        |" + "        EMAIL        |" + "        ID        |" + "        AGE        |" + "        MAJOR        |" + "        GENDER        |");
         System.out.println("Name: " + this.name);
         System.out.println("Address: " + this.Address);
         System.out.println("Email: " +this.Email);
