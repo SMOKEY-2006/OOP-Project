@@ -115,9 +115,8 @@ public class Main {
                         System.out.println("------------------------------- WELCOME -------------------------------");
                         System.out.println("1. View my Courses.");
                         System.out.println("2. View my debts.");
-                        System.out.println("3. Activities");
-                        System.out.println("4. My discount.");
-                        System.out.println("5. Main Menu.");
+                        System.out.println("3. My discount.");
+                        System.out.println("4. Main Menu.");
                         System.out.print("Enter the number of the operation you wish to proceed:");
                         int choose4 = S1.nextInt();
                         switch (choose4) {
@@ -137,7 +136,7 @@ public class Main {
                             default:
                                 break;
                         }
-                        if (choose4 == 5) {
+                        if (choose4 == 4) {
                             break;
                         }
 
