@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -139,8 +140,9 @@ public class Main {
                         System.out.println("------------------------------- WELCOME -------------------------------");
                         System.out.println("1. View my Courses.");
                         System.out.println("2. View my debts.");
-                        System.out.println("3. My discount.");
-                        System.out.println("4. Main Menu.");
+                        System.out.println("3. Activities.");
+                        System.out.println("4. Prizes.");
+                        System.out.println("5. Main Menu.");
                         System.out.print("Enter the number of the operation you wish to proceed:");
                         int choose4 = S1.nextInt();
                         switch (choose4) {
@@ -150,10 +152,12 @@ public class Main {
 
                                 break;
                             case 3:
-
+                            Activities act = new Activities();
+                            act.menu();
                                 break;
                             case 4:
-
+                            Prizes prize = new Prizes();
+                            prize.menu();
                                 break;
                             case 5:
                                 break;
