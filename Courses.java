@@ -1,4 +1,3 @@
-package com.mycompany.main;
 
 public class Courses extends DMAP {
     String[] courses2 = new String[20]; // Array for all available courses
@@ -66,8 +65,9 @@ public class Courses extends DMAP {
         for (int i = 0; i < studentCourses[studentIndex].length; i++) {
             if (studentCourses[studentIndex][i]==null) {
                 studentCourses[studentIndex][i]=courseName;
+                System.out.println(courseName + " Course has been added to Student of ID " + ID);
                 break;
-            } else if (studentCourses[studentIndex][i].equals(courseName)) {
+            } else if (studentCourses[studentIndex][i] == courseName) {
                 courseExists = true;
                 break;
             }
@@ -112,17 +112,13 @@ public class Courses extends DMAP {
         }
         
         System.out.println("Courses for Student ID " + ID + ":");
-        boolean hasCourses = false;
         for (int i = 0; i < studentCourses[studentIndex].length; i++) {
             if (studentCourses[studentIndex][i] != null) {
                 System.out.println("- " + studentCourses[studentIndex][i]);
-                hasCourses = true;
             }
         }
         
-        if (!hasCourses) {
-            System.out.println("No courses registered yet");
-        }
+        
     }
     
     public void Add_Course_Lecturer(int ID, int CRSE) {
@@ -132,7 +128,6 @@ public class Courses extends DMAP {
         }
         
         String courseName = courses2[CRSE - 1];
-        System.out.println(courseName + " Course has been added to Lecturer of ID " + ID);
         
         // Find the lecturer or add new entry
         int lecturerIndex = -1;
@@ -150,13 +145,14 @@ public class Courses extends DMAP {
             lecturerCount++;
         }
         
-        // Add the course if not already present
+        // Add the course if not already Existed.
         boolean courseExists = false;
         for (int i = 0; i < lecturerCourses[lecturerIndex].length; i++) {
             if (lecturerCourses[lecturerIndex][i] == null) {
                 lecturerCourses[lecturerIndex][i] = courseName;
+                System.out.println(courseName + " Course has been added to Lecturer of ID " + ID);
                 break;
-            } else if (lecturerCourses[lecturerIndex][i].equals(courseName)) {
+            } else if (lecturerCourses[lecturerIndex][i] == courseName) {
                 courseExists = true;
                 break;
             }
@@ -182,16 +178,11 @@ public class Courses extends DMAP {
         }
         
         System.out.println("Courses for Lecturer ID " + ID + ":");
-        boolean hasCourses = false;
         for (int i = 0; i < lecturerCourses[lecturerIndex].length; i++) {
             if (lecturerCourses[lecturerIndex][i] != null) {
                 System.out.println("- " + lecturerCourses[lecturerIndex][i]);
-                hasCourses = true;
             }
         }
         
-        if (!hasCourses) {
-            System.out.println("No courses assigned yet");
-        }
     }
 }
