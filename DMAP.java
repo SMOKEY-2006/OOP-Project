@@ -1,9 +1,9 @@
-public abstract class DMAP {
-    protected String name;
-    protected String Address;
-    protected int ID;
-    protected int age;
-    protected String Email;
+public class DMAP {
+    String name;
+    String Address;
+    int ID;
+    int age;
+    String Email;
 
     public DMAP() {
 
