@@ -50,7 +50,6 @@ public class Main {
                                 
                             case 2:
                                 
-                                S.StudentInfo();
                                 break;
                                 
                             case 3:
@@ -79,7 +78,6 @@ public class Main {
 
                                 break;
                             case 8:
-                                S.displayStudentInfo();
 
                                 break;
                             case 9:
