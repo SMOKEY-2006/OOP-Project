@@ -49,8 +49,9 @@ public class Main {
                                 break;
                                 
                             case 2:
-                                
-                                S.StudentInfo();
+                               Student s= new Student();
+                                s.StudentsInfo();
+
                                 break;
                                 
                             case 3:
@@ -75,11 +76,12 @@ public class Main {
 
                                 break;
                             case 7:
-                                C1.Display_Courses();
+
 
                                 break;
+
                             case 8:
-                                S.displayStudentInfo();
+
 
                                 break;
                             case 9:

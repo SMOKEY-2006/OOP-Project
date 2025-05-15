@@ -1,27 +1,13 @@
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Student extends DMAP {
-    private String major;
-    private String gender;
-
-    public Student() {}
-
-    public Student(String name, String address, String email, int ID, int age, String major, String gender) {
-        super(name, address, email, ID, age);
-        this.major = major;
-        this.gender = gender;
-    }
-
-    public String getMajor() {
-        return major;
-=======
-import java.util.Scanner;
-
-public class Student extends DMAP {
+public class  Student extends DMAP {
     private String Major;
     private String gender;
+    protected int numberOfStudents;
+    protected int studentDatasize;
+    String[][] StUdents = new String[numberOfStudents][studentDatasize];
+    Scanner sc = new Scanner(System.in);
 
     public Student() {
 
@@ -32,6 +18,7 @@ public class Student extends DMAP {
         this.Major = Major;
         this.gender = gender;
 
+
     }
 
     public String getMajor() {
@@ -40,67 +27,98 @@ public class Student extends DMAP {
 
     public void setMajor(String Major) {
         this.Major = Major;
->>>>>>> e46717e2103732fa81135241c80425e67463a6d1
     }
 
     public String getGender() {
         return gender;
     }
 
-<<<<<<< HEAD
-    public void setMajor(String major) {
-        this.major = major;
-    }
-
-=======
->>>>>>> e46717e2103732fa81135241c80425e67463a6d1
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-<<<<<<< HEAD
+    public void StudentsInfo() {
+        System.out.println("please enter number of students you want to add");
+
+        numberOfStudents = sc.nextInt();
+        studentDatasize = 7;
+
+        String Name = sc.next();
 
 
-=======
-    public void StudentInfo() {
-        System.out.println("Please enter your name:");
-        Scanner sc = new Scanner(System.in);
-        this.name = sc.nextLine();
-        System.out.println("Please enter your address:");
-        this.Address = sc.nextLine();
-        System.out.println("Please enter your email:");
-        this.Email = sc.nextLine();
-        System.out.println("Please enter your ID:");
-        this.ID = sc.nextInt();
-        
-        while (true) {
-            System.out.println("Please enter your age:");
-            int age = sc.nextInt();
-            if (age < 0) {
-                System.out.println("Invalid Age!");
-            } else {
-                this.age = age;
-                break;
+        System.out.println("\n please enter your name");
+
+
+        System.out.println("please enter your address");
+
+        String Address = sc.next();
+
+
+        System.out.println("please enter your email");
+        String Email = sc.nextLine();
+
+        System.out.println("please enter your ID");
+
+        String ID = sc.nextLine();
+
+        System.out.println("please  enter your age");
+        int age = sc.nextInt();
+
+        System.out.println("\n please enter your Major");
+        String Major = sc.next();
+
+        System.out.println("please enter your Gender");
+        String Gender = sc.next();
+
+
+        {
+            String[][] StUdents = new String[numberOfStudents][studentDatasize];
+            for (int j = 0; j < numberOfStudents; j++) {
+                StUdents[j][0] = name;
+                StUdents[j][1] = Address;
+                StUdents[j][2] = Email;
+                StUdents[j][3] = "ID" + ID;
+                StUdents[j][4] = "Age" + age;
+                StUdents[j][5] = "Major" + Major;
+                StUdents[j][6] = gender;
+            }
+
+            System.out.println("choose a display method");
+            System.out.println("1/view all students");
+            System.out.println("2/view one student");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println(StUdents);
+                    break;
+                case 2:
+                    System.out.println("enter number of students " + numberOfStudents);
+                    int studentsNum = sc.nextInt();
+                    if (studentsNum > 0 && studentsNum <= numberOfStudents) {
+
+                        System.out.println(StUdents[studentsNum - 1]);
+                    } else {
+                        System.out.println("please enter a valid number");
+                    }
+                    break;
+                default:
+                    System.out.println("your choice is wrong");
             }
         }
-        
-        System.out.println("please enter your Major");
-        this.Major = sc.next(); // I deleted the nextline() cuz it wasn't working with me ... if it was working with you type it again. *
-        System.out.println("please enter your Gender");
-        this.gender = sc.next(); // I deleted the nextline() cuz it wasn't working with me ... if it was working with you type it again. *
-        
-    }
 
-    public void displayStudentInfo(){
-        // *just an idea if you can format it this way :System.out.println("|        NAME        |" + "        ADDRESS        |" + "        EMAIL        |" + "        ID        |" + "        AGE        |" + "        MAJOR        |" + "        GENDER        |");
-        System.out.println("Name: " + this.name);
-        System.out.println("Address: " + this.Address);
-        System.out.println("Email: " +this.Email);
-        System.out.println("ID: " + this.ID);
-        System.out.println("Age: " + this.age);
-        System.out.println("Major: " + this.Major);
-        System.out.println("Gender: " + this.gender);
+
     }
+    //   public void displayStudents() {
+
+    //   for (int i = 0; i <= StUdents.length; i++) {
+    //         System.out.println((i+1) + ". " + StUdents[i][0]);
+
+    //  }
+
+//}
 
 }
->>>>>>> e46717e2103732fa81135241c80425e67463a6d1
+
+
+
+
