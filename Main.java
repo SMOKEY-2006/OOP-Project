@@ -1,14 +1,11 @@
-package com.mycompany.main;
-
 import java.util.Scanner;
-import java.util.Arrays;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
         
         Courses C1 = new Courses();
         Student S = new Student();
+        Lecturer L = new Lecturer();
         
         Scanner S1 = new Scanner(System.in);
         while (true) {
@@ -40,6 +37,7 @@ public class Main {
                         System.out.println("12. Main Menu.");
                         System.out.print("Enter the number of the operation you wish to proceed:");
                         int Manager_Choice = S1.nextInt();
+                        S1.nextLine();
 
                                 switch (Manager_Choice) {
                                     
@@ -49,17 +47,14 @@ public class Main {
                                 C1.Add_Course(C1.name=S1.next());
                                 break;
                                 
+
                             case 2:
-<<<<<<< HEAD
                             S.Add_Student();
                                 
-=======
-
->>>>>>> 678bf83ebdc44dbb9b6a40e884eb7afe6fa4a4d7
                                 break;
-                                
-                            case 3:
 
+                            case 3:
+                                    L.Add_Lecturer();
                                 break;
                             case 4:
                                 
@@ -85,15 +80,12 @@ public class Main {
                                 break;
 
                             case 8:
-<<<<<<< HEAD
                             S.Display_All_Students();
-=======
 
->>>>>>> 678bf83ebdc44dbb9b6a40e884eb7afe6fa4a4d7
 
                                 break;
                             case 9:
-
+                                    L.Display_All_Lecturers();
                                 break;
                             case 10:
                                 
@@ -181,7 +173,7 @@ public class Main {
                             
                                 break;
                             case 4:
-                                
+
                                 break;
                             default:
                                 break;

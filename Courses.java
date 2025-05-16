@@ -1,4 +1,3 @@
-package com.mycompany.main;
 
 public class Courses extends DMAP {
     String[] courses2 = new String[20]; // Array for all available courses

@@ -1,4 +1,4 @@
-public class DMAP {
+public abstract class DMAP {
     String name;
     String Address;
     int ID;
