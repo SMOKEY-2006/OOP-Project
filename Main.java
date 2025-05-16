@@ -49,13 +49,8 @@ public class Main {
                                 break;
                                 
                             case 2:
-<<<<<<< HEAD
-                               Student s= new Student();
-                                s.StudentsInfo();
-
-=======
+                            S.Add_Student();
                                 
->>>>>>> 03784665b93ec146b1995b3eabba4c350b85e725
                                 break;
                                 
                             case 3:
@@ -85,10 +80,7 @@ public class Main {
                                 break;
 
                             case 8:
-<<<<<<< HEAD
-
-=======
->>>>>>> 03784665b93ec146b1995b3eabba4c350b85e725
+                            S.Display_All_Students();
 
                                 break;
                             case 9:

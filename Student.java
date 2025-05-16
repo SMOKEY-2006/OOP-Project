@@ -1,12 +1,10 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class  Student extends DMAP {
     private String Major;
     private String gender;
-    protected int numberOfStudents;
-    protected int studentDatasize;
-    String[][] StUdents = new String[numberOfStudents][studentDatasize];
+    private int CurrentStudent;
+    String[][] Students = new String[CurrentStudent][7];
     Scanner sc = new Scanner(System.in);
 
     public Student() {
@@ -37,77 +35,73 @@ public class  Student extends DMAP {
         this.gender = gender;
     }
 
-    public void StudentsInfo() {
-        System.out.println("please enter number of students you want to add");
+    public void Add_Student() {
+        System.out.print("please enter number of students you want to add");
+        int numberOfStudents = sc.nextInt();
+        
+        for (int i = 0; i < numberOfStudents; i++) {
+            System.out.print("\n please enter your name:");
+            Students[CurrentStudent][0] = sc.nextLine();
 
-        numberOfStudents = sc.nextInt();
-        studentDatasize = 7;
+            System.out.print("please enter your address:");
+            Students[CurrentStudent][1] = sc.nextLine();
 
-        String Name = sc.next();
+            System.out.print("please enter your email:");
+            Students[CurrentStudent][2] = sc.next();
 
+            System.out.print("please enter your ID:");
+            Students[CurrentStudent][3] = sc.next();
 
-        System.out.println("\n please enter your name");
+            System.out.print("please  enter your age:");
+            Students[CurrentStudent][4] = sc.next();
 
+            System.out.print("please enter your Major:");
+            Students[CurrentStudent][5] = sc.next();
 
-        System.out.println("please enter your address");
+            System.out.print("please enter your Gender:");
+            Students[CurrentStudent][6] = sc.next();
 
-        String Address = sc.next();
+            CurrentStudent++;
+        }
+    }
 
+    public void Display_All_Students(){
+        for (int i = 0; i < CurrentStudent; i++) {
+            System.out.println("\nStudent " + i + ":");
+            System.out.println("Name: " + Students[i][0]);
+            System.out.println("Address: " + Students[i][1]);
+            System.out.println("Email: " + Students[i][2]);
+            System.out.println("ID: " + Students[i][3]);
+            System.out.println("Age: " + Students[i][4]);
+            System.out.println("Major: " + Students[i][5]);
+            System.out.println("Gender: " + Students[i][6]);
+            line();
+        }
+    }
 
-        System.out.println("please enter your email");
-        String Email = sc.nextLine();
-
-        System.out.println("please enter your ID");
-
-        String ID = sc.nextLine();
-
-        System.out.println("please  enter your age");
-        int age = sc.nextInt();
-
-        System.out.println("\n please enter your Major");
-        String Major = sc.next();
-
-        System.out.println("please enter your Gender");
-        String Gender = sc.next();
-
-
-        {
-            String[][] StUdents = new String[numberOfStudents][studentDatasize];
-            for (int j = 0; j < numberOfStudents; j++) {
-                StUdents[j][0] = name;
-                StUdents[j][1] = Address;
-                StUdents[j][2] = Email;
-                StUdents[j][3] = "ID" + ID;
-                StUdents[j][4] = "Age" + age;
-                StUdents[j][5] = "Major" + Major;
-                StUdents[j][6] = gender;
-            }
-
-            System.out.println("choose a display method");
-            System.out.println("1/view all students");
-            System.out.println("2/view one student");
-            int choice = sc.nextInt();
-            switch (choice) {
-                case 1:
-                    System.out.println(StUdents);
-                    break;
-                case 2:
-                    System.out.println("enter number of students " + numberOfStudents);
-                    int studentsNum = sc.nextInt();
-                    if (studentsNum > 0 && studentsNum <= numberOfStudents) {
-
-                        System.out.println(StUdents[studentsNum - 1]);
-                    } else {
-                        System.out.println("please enter a valid number");
-                    }
-                    break;
-                default:
-                    System.out.println("your choice is wrong");
-            }
+    public void Display_One_Student(int Id){
+        if (id > 1 && id <= CurrentStudent + 1) {
+            System.out.println("\nStudent " + Students[id][0] + ":");
+            System.out.println("Name: " + Students[id][0]);
+            System.out.println("Address: " + Students[id][1]);
+            System.out.println("Email: " + Students[id][2]);
+            System.out.println("ID: " + Students[id][3]);
+            System.out.println("Age: " + Students[id][4]);
+            System.out.println("Major: " + Students[id][5]);
+            System.out.println("Gender: " + Students[id][6]);
         }
 
-
+        else
+            System.out.println("Please enter a valid student ID !!");
     }
+
+    public void line(){
+        for (int i = 0; i < 20; i++) {
+            System.out.print("-");
+            System.out.println();
+        }
+    }
+
     //   public void displayStudents() {
 
     //   for (int i = 0; i <= StUdents.length; i++) {

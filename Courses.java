@@ -34,6 +34,8 @@ public class Courses extends DMAP {
     }
     int CRSE;
     private int nextCourseIndex = 12;
+
+    public int ID;
     
     public void Add_Course_Student(int ID, int CRSE) {
         if (CRSE < 1 || courses2[CRSE]==null) {
@@ -91,7 +93,7 @@ public class Courses extends DMAP {
     public void Display_Courses() {
         System.out.println("Available Courses:");
         for (int i=0; i < nextCourseIndex; i++) {
-            if (courses2[i]!=null) {
+            if (courses2[i] != null) {
                 System.out.println((i+1) + ". " + courses2[i]);
             }
         }
