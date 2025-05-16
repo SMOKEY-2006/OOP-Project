@@ -1,3 +1,4 @@
+package com.mycompany.main;
 
 import java.util.Scanner;
 import java.util.Arrays;
@@ -49,8 +50,12 @@ public class Main {
                                 break;
                                 
                             case 2:
+<<<<<<< HEAD
                             S.Add_Student();
                                 
+=======
+
+>>>>>>> 678bf83ebdc44dbb9b6a40e884eb7afe6fa4a4d7
                                 break;
                                 
                             case 3:
@@ -58,14 +63,14 @@ public class Main {
                                 break;
                             case 4:
                                 
-                                System.out.println(Arrays.toString(C1.courses2));
+                                C1.Display_Courses();
                                 System.out.println("Please Enter the ID [1-20] of the Student, And the Number of the Course!");
                                 C1.Add_Course_Student(C1.ID=S1.nextInt(),C1.CRSE=S1.nextInt());
                                     
                                 break;
                             case 5:
                                 
-                                System.out.println(Arrays.toString(C1.courses2));
+                                C1.Display_Courses();
                                 System.out.println("Please Enter the ID [1-20] of the Lecturer, And the Number of the Course!");
                                 int x = S1.nextInt() , CRSE=S1.nextInt();
                                 C1.Add_Course_Lecturer(x,CRSE);
@@ -80,7 +85,11 @@ public class Main {
                                 break;
 
                             case 8:
+<<<<<<< HEAD
                             S.Display_All_Students();
+=======
+
+>>>>>>> 678bf83ebdc44dbb9b6a40e884eb7afe6fa4a4d7
 
                                 break;
                             case 9:

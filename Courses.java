@@ -1,3 +1,4 @@
+package com.mycompany.main;
 
 public class Courses extends DMAP {
     String[] courses2 = new String[20]; // Array for all available courses
@@ -38,13 +39,14 @@ public class Courses extends DMAP {
     public int ID;
     
     public void Add_Course_Student(int ID, int CRSE) {
-        if (CRSE < 1 || courses2[CRSE]==null) {
+
+          String courseName = courses2[CRSE-1];
+//        System.out.println(courseName + " Course has been added to Student of ID " + ID);
+        
+        if (courses2[CRSE-1]==null) {
             System.out.println("Invalid Course Number. Please Try Again!");
             return;
         }
-        
-        String courseName = courses2[CRSE-1];
-        System.out.println(courseName + " Course has been added to Student of ID " + ID);
         
         // Find the student or add new entry
         int studentIndex=-1;
