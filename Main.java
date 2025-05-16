@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         Courses C1 = new Courses();
         Student S = new Student();
         Lecturer L = new Lecturer();
-        
+
         Scanner S1 = new Scanner(System.in);
         while (true) {
             System.out.println("------------- Course Registration System -------------");
@@ -22,94 +22,87 @@ public class Main {
             switch (Main_Choice) {
                 case 1:
                     while (true) {
-                        System.out.println("------------------------------- Welcome Sir -------------------------------");
+                        System.out
+                                .println("------------------------------- Welcome Sir -------------------------------");
                         System.out.println("1. Add a Course.");
                         System.out.println("2. Add a Student.");
                         System.out.println("3. Add a Lecturer.");
                         System.out.println("4. Register a course for a student.");
                         System.out.println("5. Register a course for a lecturer.");
-                        System.out.println("6. Display collage information.");
-                        System.out.println("7. Display the complete list of courses.");
-                        System.out.println("8. Display the complete list of students.");
-                        System.out.println("9. Display the complete list of lecturers.");
-                        System.out.println("10. Display a list of courses currently taken by a particular student.");
-                        System.out.println("11. Display a list of courses currently taught by a particular lecturer.");
-                        System.out.println("12. Main Menu.");
+                        System.out.println("6. Display the complete list of courses.");
+                        System.out.println("7. Display the complete list of students.");
+                        System.out.println("8. Display the complete list of lecturers.");
+                        System.out.println("9. Display a list of courses currently taken by a particular student.");
+                        System.out.println("10. Display a list of courses currently taught by a particular lecturer.");
+                        System.out.println("11. Main Menu.");
                         System.out.print("Enter the number of the operation you wish to proceed:");
                         int Manager_Choice = S1.nextInt();
                         S1.nextLine();
 
-                                switch (Manager_Choice) {
-                                    
+                        switch (Manager_Choice) {
                             case 1:
-                                
                                 System.out.println("Please Enter the Name of the Course that you wish to ADD!");
-                                C1.Add_Course(C1.name=S1.next());
+                                C1.Add_Course(C1.name = S1.next());
                                 break;
-                                
 
                             case 2:
-                            S.Add_Student();
-                                
+                                S.Add_Student();
+
                                 break;
 
                             case 3:
-                                    L.Add_Lecturer();
+                                L.Add_Lecturer();
                                 break;
+
                             case 4:
-                                
                                 C1.Display_Courses();
-                                System.out.println("Please Enter the ID [1-20] of the Student, And the Number of the Course!");
-                                C1.Add_Course_Student(C1.ID=S1.nextInt(),C1.CRSE=S1.nextInt());
-                                    
+                                System.out.println(
+                                        "Please Enter the ID [1-20] of the Student, And the Number of the Course!");
+                                C1.Add_Course_Student(C1.ID = S1.nextInt(), C1.CRSE = S1.nextInt());
                                 break;
+
                             case 5:
-                                
                                 C1.Display_Courses();
-                                System.out.println("Please Enter the ID [1-20] of the Lecturer, And the Number of the Course!");
-                                int x = S1.nextInt() , CRSE=S1.nextInt();
-                                C1.Add_Course_Lecturer(x,CRSE);
-
+                                System.out.println(
+                                        "Please Enter the ID [1-20] of the Lecturer, And the Number of the Course!");
+                                int x = S1.nextInt(), CRSE = S1.nextInt();
+                                C1.Add_Course_Lecturer(x, CRSE);
                                 break;
+
                             case 6:
-
+                                C1.Display_Courses();
                                 break;
-                            case 7:
 
+                            case 7:
+                                S.Display_All_Students();
 
                                 break;
 
                             case 8:
-                            S.Display_All_Students();
-
-
+                                L.Display_All_Lecturers();
                                 break;
+
                             case 9:
-                                    L.Display_All_Lecturers();
+                                System.out.println("Please Enter the ID of the Student!");
+                                C1.Display_Courses_Student(C1.ID = S1.nextInt());
                                 break;
                             case 10:
-                                
-                                System.out.println("Please Enter the ID of the Student!");
-                                C1.Display_Courses_Student(C1.ID=S1.nextInt());
-
-                                break;
-                            case 11:
-                                
                                 System.out.println("Please Enter the ID of the Lecturer!");
-                                C1.Display_Courses_Lecturer(C1.ID=S1.nextInt());
-
+                                C1.Display_Courses_Lecturer(C1.ID = S1.nextInt());
                                 break;
-                            case 12:
+
+                            case 11:
                                 break;
 
                             default:
+                                System.out.println("Please enter a valid choice!!");
                                 break;
                         }
-                        if (Manager_Choice==12){
+                        if (Manager_Choice == 11) {
                             break;
                         }
                     }
-            
+
                     break;
 
                 case 2:
@@ -117,28 +110,24 @@ public class Main {
                         System.out.println(
                                 "------------------------------- Welcome Doctor -------------------------------");
                         System.out.println("1. View my Courses.");
-                        System.out.println("2. View my schedule.");
-                        System.out.println("3. Main Menu.");
+                        System.out.println("2. Main Menu.");
                         System.out.print("Enter the number of the operation you wish to proceed:");
                         int Doctor_Choice = S1.nextInt();
+
                         switch (Doctor_Choice) {
                             case 1:
-                                
                                 System.out.println("Please Enter your ID!");
-                                C1.Display_Courses_Lecturer(C1.ID=S1.nextInt());
-
+                                C1.Display_Courses_Lecturer(C1.ID = S1.nextInt());
                                 break;
+
                             case 2:
-
-                                break;
-                            case 3:
-
                                 break;
 
                             default:
+                                System.out.println("Please enter a valid choice!!");
                                 break;
                         }
-                        if (Doctor_Choice == 3) {
+                        if (Doctor_Choice == 2) {
                             break;
                         }
                     }
@@ -155,27 +144,25 @@ public class Main {
                         int Student_Choice = S1.nextInt();
                         switch (Student_Choice) {
                             case 1:
-                                
+
                                 System.out.println("Please Enter your ID!");
-                                C1.Display_Courses_Student(C1.ID=S1.nextInt());
-                                
-                                break;
-                            case 2:
-                                
-                            Activities act = new Activities();
-                            act.menu();
-                            
-                                break;
-                            case 3:
-                                
-                            Prizes prize = new Prizes();
-                            prize.menu();
-                            
-                                break;
-                            case 4:
+                                C1.Display_Courses_Student(C1.ID = S1.nextInt());
 
                                 break;
+                            case 2:
+                                Activities act = new Activities();
+                                act.menu();
+                                break;
+
+                            case 3:
+                                Prizes prize = new Prizes();
+                                prize.menu();
+                                break;
+
+                            case 4:
+                                break;
                             default:
+                                System.out.println("Please enter a valid choice!!");
                                 break;
                         }
                         if (Student_Choice == 4) {
@@ -195,4 +182,4 @@ public class Main {
             }
         }
     }
- }
+}
