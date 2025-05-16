@@ -1,6 +1,9 @@
+
+
+package com.mycompany.oop2;
 import java.util.Scanner;
 
-public class Main {
+public class OOP2 {
     public static void main(String[] args) {
 
         Courses C1 = new Courses();
@@ -42,7 +45,7 @@ public class Main {
                         switch (Manager_Choice) {
                             case 1:
                                 System.out.println("Please Enter the Name of the Course that you wish to ADD!");
-                                C1.Add_Course(C1.name = S1.next());
+                                C1.Add_Course(C1.name = S1.nextLine());
                                 break;
 
                             case 2:
