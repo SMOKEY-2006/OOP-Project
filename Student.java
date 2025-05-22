@@ -81,46 +81,7 @@ public class  Student extends DMAP {
         }
     }
     
-    //                                              !!--!! Delete this Method !!--!!
-    // public void Display(){
-    //     System.out.println("1) View certain Student.");
-    //     System.out.println("2) View all students.");
-    //     int choice = sc.nextInt();
-
-    //     switch (choice) {
-    //         case 1:
-    //         Display_One_Student(sc.nextInt());
-                
-    //             break;
-
-    //         case 2:
-    //         Display_All_Students();
-
-    //             break;
-        
-    //         default:
-    //             break;
-    //     }
-    //
-    // }
-    // public void Display_One_Student(int id){
-    //     if (id > 1 && id <= CurrentStudent + 1) {
-    //         System.out.println("\nStudent " + Students[id][0] + ":");
-    //         System.out.println("Name: " + Students[id][0]);
-    //         System.out.println("Address: " + Students[id][1]);
-    //         System.out.println("Email: " + Students[id][2]);
-    //         System.out.println("ID: " + Students[id][3]);
-    //         System.out.println("Age: " + Students[id][4]);
-    //         System.out.println("Major: " + Students[id][5]);
-    //         System.out.println("Gender: " + Students[id][6]);
-    //     }
-    //
-    //     else
-    //         System.out.println("Please enter a valid student ID !!");
-    // }
-
-    // A line for the structure of display.
-
+                                             
     public void line(){
         for (int i = 0; i < 20; i++) {
             System.out.print("-");
